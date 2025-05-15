@@ -17,11 +17,11 @@ export class App extends Component {
     $title.className = 'total-amount';
     $title.textContent = 'Итого: $';
 
-    const $totalSpan = document.createElement('span');
-    $totalSpan.textContent = this.state.total;
+    const $totalAmount = document.createElement('span');
+    $totalAmount.textContent = this.state.total;
+    this.$total = $totalAmount;
+    $title.appendChild($totalAmount);
 
-    this.$total = $totalSpan;
-    $title.appendChild($totalSpan);
     this.$rootElement.appendChild($title);
 
     const donateForm = new Form({
